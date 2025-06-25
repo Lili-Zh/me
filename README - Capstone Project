@@ -1,0 +1,33 @@
+Financial Risk Assessment – EDA & Baseline Modeling
+Overview
+This project explores a financial dataset of 15,000 individual credit applicants to assess and predict their financial risk rating (Low, Medium, or High). The analysis focuses on data cleaning, feature engineering, exploratory data analysis (EDA), and building a baseline machine learning model to serve as the foundation for more advanced modeling in future stages.
+Objectives
+•	Understand the distribution and quality of the dataset
+•	Clean and prepare the data for machine learning
+•	Engineer meaningful new features from raw attributes
+•	Visualize key trends and relationships between variables
+•	Build a baseline classification model to predict risk level
+Data Cleaning
+•	Handled missing values in numerical features using median imputation and in categorical features using mode imputation.
+•	Ensured all columns were properly formatted and encoded for modeling.
+Feature Engineering
+To improve model performance and interpretability, several new features were created:
+•	Loan_to_Income Ratio: A derived feature showing how much a person is borrowing relative to their income.
+•	Binned Credit Score: Categorized into Poor, Fair, Good, Very Good, and Excellent.
+•	Binned Age: Grouped into Young, Mid-Age, Adult, and Senior for clearer trend analysis.
+All categorical variables were label encoded for compatibility with machine learning models.
+xploratory Data Analysis (EDA)
+Several visualizations were produced to understand the data:
+•	Distribution of Risk Ratings shows class imbalance (most are Low risk).
+•	Income vs. Risk Rating reveals higher-income individuals tend to be lower risk.
+•	Correlation Heatmap highlights relationships among features like income, credit score, and debt ratio.
+•	Loan Purpose vs. Risk indicates that loans for business or personal use are more likely to be high risk.
+Baseline Model
+A Random Forest Classifier was used as the baseline ML model:
+•	Accuracy: ~59%
+•	The model predicts "Low" risk well, but underperforms on "Medium" and "High" risks, primarily due to class imbalance.
+Next Steps
+•	Apply class balancing techniques (e.g., SMOTE, class weighting).
+•	Try advanced models like XGBoost or Logistic Regression with hyperparameter tuning.
+•	Improve feature selection and perform cross-validation for robustness.
+•	Package results for technical and non-technical presentations.
